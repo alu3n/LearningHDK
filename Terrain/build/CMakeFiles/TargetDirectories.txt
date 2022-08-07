@@ -1,0 +1,4 @@
+/Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/build/CMakeFiles/SOP_Star.dir
+/Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/build/CMakeFiles/TerrainModel.dir
+/Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/build/CMakeFiles/edit_cache.dir
+/Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/build/CMakeFiles/rebuild_cache.dir

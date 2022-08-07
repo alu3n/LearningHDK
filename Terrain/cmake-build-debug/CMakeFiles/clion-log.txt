@@ -1,0 +1,21 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain -B /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/cmake-build-debug
+CMake Error at CMakeLists.txt:15 (find_package):
+  By not providing "FindHoudini.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "Houdini", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "Houdini" with any
+  of the following names:
+
+    HoudiniConfig.cmake
+    houdini-config.cmake
+
+  Add the installation prefix of "Houdini" to CMAKE_PREFIX_PATH or set
+  "Houdini_DIR" to a directory containing one of the above files.  If
+  "Houdini" provides a separate development package or SDK, be sure it has
+  been installed.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/cmake-build-debug/CMakeFiles/CMakeError.log".

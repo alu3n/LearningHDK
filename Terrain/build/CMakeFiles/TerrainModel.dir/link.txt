@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libTerrainModel.a CMakeFiles/TerrainModel.dir/TerrainModel/Nutrients.cpp.o CMakeFiles/TerrainModel.dir/TerrainModel/Water.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libTerrainModel.a
