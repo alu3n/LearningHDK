@@ -87,7 +87,7 @@ CMakeFiles/SOP_Star.dir/SOP_Terrain.cpp.i: cmake_force
 
 CMakeFiles/SOP_Star.dir/SOP_Terrain.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SOP_Star.dir/SOP_Terrain.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/SOP_Terrain.cpp -o CMakeFiles/SOP_Star.dir/SOP_Terrain.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -TS /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/SOP_Terrain.cpp -o CMakeFiles/SOP_Star.dir/SOP_Terrain.cpp.s
 
 # Object files for target SOP_Star
 SOP_Star_OBJECTS = \

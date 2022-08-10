@@ -81,7 +81,7 @@ CMakeFiles/HDK_Project.dir/TerrainModel/Nutrients.cpp.i: cmake_force
 
 CMakeFiles/HDK_Project.dir/TerrainModel/Nutrients.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HDK_Project.dir/TerrainModel/Nutrients.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/TerrainModel/Nutrients.cpp -o CMakeFiles/HDK_Project.dir/TerrainModel/Nutrients.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -TS /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/TerrainModel/Nutrients.cpp -o CMakeFiles/HDK_Project.dir/TerrainModel/Nutrients.cpp.s
 
 CMakeFiles/HDK_Project.dir/TerrainModel/Water.cpp.o: CMakeFiles/HDK_Project.dir/flags.make
 CMakeFiles/HDK_Project.dir/TerrainModel/Water.cpp.o: ../TerrainModel/Water.cpp
@@ -95,7 +95,7 @@ CMakeFiles/HDK_Project.dir/TerrainModel/Water.cpp.i: cmake_force
 
 CMakeFiles/HDK_Project.dir/TerrainModel/Water.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HDK_Project.dir/TerrainModel/Water.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/TerrainModel/Water.cpp -o CMakeFiles/HDK_Project.dir/TerrainModel/Water.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -TS /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/TerrainModel/Water.cpp -o CMakeFiles/HDK_Project.dir/TerrainModel/Water.cpp.s
 
 # Object files for target HDK_Project
 HDK_Project_OBJECTS = \

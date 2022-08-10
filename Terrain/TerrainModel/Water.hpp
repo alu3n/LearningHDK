@@ -11,8 +11,8 @@ struct Water{
     float Volume;
     NutrientPack NP;
     Water(float,NutrientPack);
+    Water();
     std::vector<NutrientType> WaterType();
-
 };
 
 //Again equality for type

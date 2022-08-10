@@ -5,9 +5,16 @@
 #ifndef TERRAIN_TERRAINSIMULATION_HPP
 #define TERRAIN_TERRAINSIMULATION_HPP
 
+#include "TerrainFormation.hpp"
+#include "Settings.hpp"
+
+
 class TerrainSimulation{
+private:
+    using S = TerrainSettings;
 public:
-    void Tick();
+    TerrainFormation T;
+    void Tick(size_t);
     void Reset();
     TerrainSimulation();
 };

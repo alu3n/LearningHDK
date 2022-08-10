@@ -1497,7 +1497,7 @@ CMakeFiles/SOP_Star.dir/SOP_Terrain.cpp.o: ../SOP_Terrain.cpp \
   /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/OP/OP_PostItNoteList.h \
   /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/UT/UT_StringMMPattern.h \
   /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/PRM/PRM_Shared.h \
-  SOP_Terrain.proto.h \
+  ../SOP_Terrain.proto.h \
   /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/SOP/SOP_NodeVerb.h \
   /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/OP/OP_Director.h \
   /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/OP/OP_CommandManager.h \
@@ -1588,8 +1588,22 @@ CMakeFiles/SOP_Star.dir/SOP_Terrain.cpp.o: ../SOP_Terrain.cpp \
   /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/UT/UT_SharedMem.h \
   /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/UT/UT_Signal.h \
   /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/UT/UT_TimeGate.h \
-  ../TerrainModel/Nutrients.hpp
+  ../TerrainModel/TerrainSimulation.hpp \
+  ../TerrainModel/TerrainFormation.hpp \
+  ../TerrainModel/TerrainAgent.hpp \
+  ../TerrainModel/Water.hpp \
+  ../TerrainModel/Nutrients.hpp \
+  ../TerrainModel/Lookup.hpp \
+  ../TerrainModel/Utility/Vector.hpp \
+  ../TerrainModel/Settings.hpp \
+  ../TerrainModel/TerrainMessage.hpp
 
+
+../TerrainModel/Settings.hpp:
+
+../TerrainModel/Lookup.hpp:
+
+../TerrainModel/Water.hpp:
 
 /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/UT/UT_Signal.h:
 
@@ -2047,6 +2061,8 @@ CMakeFiles/SOP_Star.dir/SOP_Terrain.cpp.o: ../SOP_Terrain.cpp \
 
 /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/EXPR/EXPR_Lock.h:
 
+../TerrainModel/TerrainAgent.hpp:
+
 /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/hboost/utility/result_of.hpp:
 
 /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/UT/UT_LockedRawPtr.h:
@@ -2268,6 +2284,8 @@ CMakeFiles/SOP_Star.dir/SOP_Terrain.cpp.o: ../SOP_Terrain.cpp \
 /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/hboost/predef/compiler/palm.h:
 
 /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/hboost/predef/compiler/mpw.h:
+
+../SOP_Terrain.proto.h:
 
 /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/hboost/predef/compiler/metrowerks.h:
 
@@ -2613,6 +2631,8 @@ CMakeFiles/SOP_Star.dir/SOP_Terrain.cpp.o: ../SOP_Terrain.cpp \
 
 /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/SYS/SYS_AtomicPtr.h:
 
+../TerrainModel/Utility/Vector.hpp:
+
 /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/hboost/predef/compiler/nvcc.h:
 
 /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/UT/UT_TaskState.h:
@@ -2870,6 +2890,8 @@ CMakeFiles/SOP_Star.dir/SOP_Terrain.cpp.o: ../SOP_Terrain.cpp \
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/mach/machine/_structs.h:
 
 /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/tbb/concurrent_hash_map.h:
+
+../TerrainModel/TerrainFormation.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__variant/monostate.h:
 
@@ -3334,6 +3356,8 @@ CMakeFiles/SOP_Star.dir/SOP_Terrain.cpp.o: ../SOP_Terrain.cpp \
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/set_symmetric_difference.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/set_difference.h:
+
+../TerrainModel/TerrainMessage.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/search_n.h:
 
@@ -4227,6 +4251,8 @@ CMakeFiles/SOP_Star.dir/SOP_Terrain.cpp.o: ../SOP_Terrain.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rune_t.h:
 
+../TerrainModel/TerrainSimulation.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_gid_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/iterator:
@@ -4510,8 +4536,6 @@ CMakeFiles/SOP_Star.dir/SOP_Terrain.cpp.o: ../SOP_Terrain.cpp \
 /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/hboost/thread/pthread/thread_data.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/float.h:
-
-SOP_Terrain.proto.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_xlocale.h:
 

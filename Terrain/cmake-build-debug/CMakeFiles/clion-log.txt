@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain -B /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/cmake-build-debug
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -TS /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain -B /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/cmake-build-debug
 CMake Error at CMakeLists.txt:15 (find_package):
   By not providing "FindHoudini.cmake" in CMAKE_MODULE_PATH this project has
   asked CMake to find a package configuration file provided by "Houdini", but

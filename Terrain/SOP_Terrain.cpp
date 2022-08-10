@@ -14,7 +14,7 @@
 #include <limits.h>
 
 //New
-#include "TerrainModel/Nutrients.hpp"
+#include "TerrainModel/TerrainSimulation.hpp"
 
 using namespace HDK_Sample;
 
@@ -69,7 +69,11 @@ public:
     static const SOP_NodeVerb::Register<SOP_TerrainVerb> theVerb;
 private:
     int * LastFrame = new int(0);
+    TerrainSimulation * terrainSimulation = new TerrainSimulation();
 //    int * PointCount = new int(0);
+    void DrawCached() const{
+
+    }
 };
 
 
@@ -82,27 +86,92 @@ const SOP_NodeVerb * SOP_Terrain::cookVerb() const
 
 void SOP_TerrainVerb::cook(const SOP_NodeVerb::CookParms &cookparms) const
 {
+    //Parameters to create:
+    // Water as of now... pscale, water amount, position
+
     GU_Detail *detail = cookparms.gdh().gdpNC();
     auto && sopparms = cookparms.parms<SOP_TerrainParms>();
 
     auto frame = (int)sopparms.getStep();
 
+
     if(frame == *LastFrame){
-//        return;
-        //Here draw cached file
+        return;
     }
     if(frame-1 == *LastFrame){
-//        *PointCount = frame;
-        //Here do step
         *LastFrame = *LastFrame + 1;
-//        *PointCount = *PointCount + frame;
+//        DrawCached();
+        terrainSimulation->Tick(frame);
     }
     else{
         *LastFrame = 0;
-        //Here reset sim
+        terrainSimulation->Reset();
+        detail->clearAndDestroy();
+        return;
     }
 
-//    detail->clearAndDestroy();
-//    detail->appendPointBlock(*PointCount);
+//    TerrainFormation T = TerrainFormation();
+    detail->clearAndDestroy();
 
+//    auto T* = terrainSimulation->T;
+
+    detail->appendPointBlock(terrainSimulation->T.Storage.Count(CellType::UG)+terrainSimulation->T.Storage.Count(CellType::AG));
+
+    detail->addFloatTuple(GA_ATTRIB_POINT,"pscale",1);
+    detail->addFloatTuple(GA_ATTRIB_POINT,"water",1);
+
+    GA_Attribute *pscaleAttrib = detail->findFloatTuple(GA_ATTRIB_POINT,"pscale",1);
+    GA_Attribute *waterAttrib = detail->findFloatTuple(GA_ATTRIB_POINT,"water",1);
+
+    const GA_AIFTuple *pscaleTuple = pscaleAttrib->getAIFTuple();
+    const GA_AIFTuple *waterTuple = waterAttrib->getAIFTuple();
+
+    auto fullVolume = TerrainSettings::VoxelSize*TerrainSettings::VoxelSize*TerrainSettings::VoxelSize;
+
+    auto sizeAG = terrainSimulation->T.Storage.Count(CellType::AG);
+    auto sizeUG = terrainSimulation->T.Storage.Count(CellType::UG);
+
+    for(int i = 0; i < sizeAG; ++i){
+        auto P = terrainSimulation->T.Storage.WorldCords(i);
+        UT_Vector3 pos(P.X,P.Y,P.Z);
+        detail->setPos3(i,pos);
+        auto W = terrainSimulation->T.Storage.CellAG(i).W.Volume;
+        waterTuple->set(waterAttrib,i,W/fullVolume);
+    }
+
+    for(int i = sizeAG; i < sizeAG+sizeUG; ++i){
+        auto P = terrainSimulation->T.Storage.WorldCords(i);
+        UT_Vector3 pos(P.X,P.Y,P.Z);
+        detail->setPos3(i,pos);
+        auto W = terrainSimulation->T.Storage.CellUG(i).W.Volume;
+        waterTuple->set(waterAttrib,i,W/fullVolume);
+    }
+
+    //TODO: Create constructor with top layer AGs
+
+//    for(int i = 0; i < terrainSimulation->T.Storage.Count(CellType::UG); ++i){
+//        auto P = terrainSimulation->T.Storage.WorldCords(i);
+//        UT_Vector3 pos(P.X,P.Y,P.Z);
+//        detail->setPos3(i,pos);
+//        auto W = terrainSimulation->T.Storage.CellUG(i).W.Volume;
+//        waterTuple->set(waterAttrib,i,W/fullVolume);
+//    }
+
+//    for(int i = terrainSimulation->T.Storage.Count(CellType::AG);;++i){
+//
+//    }
+
+
+//    for(int i = 0; i < T->AgentCount();++i){
+//        auto P = T->GetPosition({CellType::UG,i});
+//        UT_Vector3 pos(get<0>(P),get<1>(P),get<2>(P));
+//        UT_Vector3 pscale(VoxelSize,0,0);
+//        UT_Vector3 water(T->UnderGroundCells[i].W.Volume,0,0);
+////        UT_Vector3 water((float)frame,0,0);
+//
+//        pscaleTuple->set(pscaleAttrib,i,pscale.data(),3);
+//        waterTuple->set(waterAttrib,i,water.data(),3);
+//        detail->setPos3(i,pos);
+////        detail->setpscale1(i,0);
+//    }
 }

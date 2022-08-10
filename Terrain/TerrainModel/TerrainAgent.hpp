@@ -6,28 +6,23 @@
 #define TERRAIN_TERRAINAGENT_HPP
 
 #include "Water.hpp"
-#include "TerrainFormation.hpp"
 
 enum class CellType{
     AG,
     UG
 };
 
-class UnderGroundCell{
+struct UnderGroundCell{
 public:
-    UnderGroundCell(Water W, NutrientPack NP);
-    void Tick(const TerrainFormation & terrainFormation, unsigned int simulationStep);
+    UnderGroundCell(Water water, NutrientPack nutrientPack, size_t iD);
     unsigned int ID;
-private:
     Water W;
     NutrientPack NP;
 };
 
-class AboveGroundCell{
-    AboveGroundCell(Water W);
-    void Tick(const TerrainFormation & terrainFormation, unsigned int simulationStep);
+struct AboveGroundCell{
+    AboveGroundCell(Water water, size_t iD);
     unsigned int ID;
-private:
     Water W;
 };
 

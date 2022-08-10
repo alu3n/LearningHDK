@@ -5,7 +5,7 @@
 #include <iostream>
 #include "Water.hpp"
 
-Water::Water(float volume, NutrientPack nutrientPack) : NP(nutrientPack) {
+Water::Water(float volume, NutrientPack nutrientPack) : NP(nutrientPack.Nutrients) {
     Volume = volume;
 }
 
@@ -43,3 +43,7 @@ std::ostream & operator<<(std::ostream & os, Water W){
     return os;
 }
 
+Water::Water() {
+    Volume = 0;
+    NP = NutrientPack();
+}

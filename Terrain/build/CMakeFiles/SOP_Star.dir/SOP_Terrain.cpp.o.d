@@ -1495,7 +1495,7 @@ CMakeFiles/SOP_Star.dir/SOP_Terrain.cpp.o: \
   /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/OP/OP_PostItNoteList.h \
   /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/UT/UT_StringMMPattern.h \
   /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/PRM/PRM_Shared.h \
-  /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/build/SOP_Terrain.proto.h \
+  /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/SOP_Terrain.proto.h \
   /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/SOP/SOP_NodeVerb.h \
   /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/OP/OP_Director.h \
   /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/OP/OP_CommandManager.h \
@@ -1586,4 +1586,12 @@ CMakeFiles/SOP_Star.dir/SOP_Terrain.cpp.o: \
   /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/UT/UT_SharedMem.h \
   /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/UT/UT_Signal.h \
   /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/toolkit/include/UT/UT_TimeGate.h \
-  /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/TerrainModel/Nutrients.hpp
+  /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/TerrainModel/TerrainSimulation.hpp \
+  /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/TerrainModel/TerrainFormation.hpp \
+  /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/TerrainModel/TerrainAgent.hpp \
+  /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/TerrainModel/Water.hpp \
+  /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/TerrainModel/Nutrients.hpp \
+  /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/TerrainModel/Lookup.hpp \
+  /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/TerrainModel/Utility/Vector.hpp \
+  /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/TerrainModel/Settings.hpp \
+  /Users/vojtechproschl/Documents/GitHub/LearningHDK/Terrain/TerrainModel/TerrainMessage.hpp

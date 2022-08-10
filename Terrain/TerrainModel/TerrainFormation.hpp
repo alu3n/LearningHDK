@@ -8,37 +8,51 @@
 #include <vector>
 #include <memory>
 #include <array>
+#include <map>
 #include "TerrainAgent.hpp"
+#include "Lookup.hpp"
 #include "TerrainMessage.hpp"
 
-//region PROPERTIES
-constexpr size_t ResolutionX = 10;
-constexpr size_t ResolutionY = 5;
-constexpr size_t ResolutionZ = 20;
+//auto t1 = std::vector<std::tuple<AboveGroundCell,Vector3i>>();
+//auto t2 = std::vector<std::tuple<UnderGroundCell,Vector3i>>();
 
-constexpr float TimeStepDuration = 1; //In hours
-//endregion
+enum class Direction{
+    Lateral,
+    Downward,
+    Upward
+};
+
+//enum class ConstructionType{
+//    OnlyUG,
+//
+//};
 
 class TerrainFormation{
-public:
-    void Tick(unsigned int simulationStep);
-    void Clearance(unsigned int simulationStep);
-    void SendMessage(const UnderGroundMessage & message);
-    void SendMessage(const AboveGroundMessage & message);
-
-
-    TerrainFormation();
-    //template<typename HeightField>
-    //explicit TerrainFormation(const HeightField & heightField);
-
 private:
-    std::vector<std::unique_ptr<UnderGroundMessage>> UnderGroundPostBox;
-    std::vector<std::unique_ptr<AboveGroundMessage>> AboveGroundPostBox;
+    using TS = TerrainSettings;
+    using SS = SimulationSettings;
+    void ProcessVoxel(Vector3i coords);
+    void ProcessAG(Vector3i coords);
+    void ProcessUG(Vector3i coords);
 
-    std::vector<UnderGroundCell> UnderGroundCells;
-    std::vector<AboveGroundCell> AboveGroundCells;
+    std::vector<std::unique_ptr<UnderGroundMessage>> PostBoxUG;
+    std::vector<std::unique_ptr<AboveGroundMessage>> PostBoxAG;
 
-    std::array<std::array<std::array<std::tuple<CellType,unsigned int>,ResolutionZ>,ResolutionY>,ResolutionX> LookUpArray;
+    void RainSource(float AmountPerHour);
+    void CornerSource(float AmountPerHour);
+    void RandomRainSource(float AmountPerHour,size_t hotSpots);
+public:
+    TerrainLookup<TS::RX,TS::RY,TS::RZ> Storage;
+
+    void Dispatch(size_t timeStep);
+    void Clearance(size_t timeStep);
+    void SendMessage(std::unique_ptr<UnderGroundMessage> message);
+    void SendMessage(std::unique_ptr<AboveGroundMessage> message);
+
+    TerrainFormation() = default;
+    explicit TerrainFormation(bool);
+    explicit TerrainFormation(int);
+
 };
 
 #endif //TERRAIN_TERRAINFORMATION_HPP

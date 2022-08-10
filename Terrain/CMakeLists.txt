@@ -25,7 +25,7 @@ houdini_generate_proto_headers( FILES SOP_Terrain.cpp )
 add_library( ${library_name} SHARED
     SOP_Terrain.cpp
     SOP_Terrain.hpp
-        TerrainModel/TerrainSimulation.cpp TerrainModel/TerrainFormation.cpp TerrainModel/TerrainAgent.cpp)
+)
 
 add_library( TerrainModel
     TerrainModel/Nutrients.hpp
@@ -39,7 +39,13 @@ add_library( TerrainModel
     TerrainModel/TerrainFormation.cpp
     TerrainModel/TerrainSimulation.cpp
     TerrainModel/TerrainAgent.cpp
-)
+    TerrainModel/TerrainMessage.cpp
+    TerrainModel/Lookup.hpp
+    TerrainModel/TerrainFormationConstructors.cpp
+    TerrainModel/TerrainFormationProcess.cpp
+    TerrainModel/Utility/Vector.hpp
+    TerrainModel/Utility/Vector.cpp
+        )
 
 
 # Link against the Houdini libraries, and add required include directories and

@@ -6,6 +6,7 @@
 #ifndef TERRAIN_NUTRIENTS_HPP
 #define TERRAIN_NUTRIENTS_HPP
 
+#include <iostream>
 #include <vector>
 
 enum class NutrientType{
@@ -20,12 +21,14 @@ struct Nutrient{
     float Amount;
     NutrientType Type;
     Nutrient(NutrientType,float);
+    Nutrient();
     NutrientType NutrientType() const;
 };
 
 struct NutrientPack{
     std::vector<Nutrient> Nutrients;
     explicit NutrientPack(std::vector<Nutrient> nutrients);
+    NutrientPack();
     std::vector<NutrientType> NutrientPackType() const;
 };
 

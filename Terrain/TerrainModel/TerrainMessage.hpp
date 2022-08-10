@@ -12,16 +12,25 @@ enum class MessageTypes{
     Decrease
 };
 
+
+//struct TerrainMessage{
+//    virtual CellType TargetType() = 0;
+//};
+
 struct UnderGroundMessage{
     MessageTypes Type;
     unsigned int TargetID;
-    void Receive(const UnderGroundCell & agent, unsigned int simulationStep);
+    Water W;
+    UnderGroundMessage(MessageTypes,unsigned int,Water);
+    void Receive(UnderGroundCell & agent, unsigned int simulationStep);
 };
 
 struct AboveGroundMessage{
     MessageTypes Type;
     unsigned int TargetID;
-    void Receive(const AboveGroundCell & agent, unsigned int simulationStep);
+    Water W;
+    AboveGroundMessage(MessageTypes,unsigned int,Water);
+    void Receive(AboveGroundCell & agent, unsigned int simulationStep);
 };
 
 #endif //TERRAIN_TERRAINMESSAGE_HPP

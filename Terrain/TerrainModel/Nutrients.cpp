@@ -111,5 +111,14 @@ std::ostream & operator<<(std::ostream & os, const NutrientPack & NP){
     return os;
 }
 
+Nutrient::Nutrient() {
+    Amount = 0;
+    Type = NutrientType::K;
+}
+
+NutrientPack::NutrientPack() {
+    Nutrients = std::vector<Nutrient>();
+}
+
 
 
